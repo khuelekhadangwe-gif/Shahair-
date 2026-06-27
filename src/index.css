@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFF8F0;
+  --color-blush: #FADBD8;
+  --color-rose: #F5E6E0;
+  --color-rose-light: #FDF2EF;
+  --color-rosegold: #B76E79;
+  --color-rosegold-dark: #A35E69;
+  --color-burgundy: #722F37;
+  --color-burgundy-dark: #5A252C;
+  --color-charcoal: #2D2D2D;
+  --color-warm-gray: #8B8685;
+  --color-light-gray: #F9F5F3;
+
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", "system-ui", "sans-serif";
+}
+
+/* Custom continuous animation utility */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.whatsapp-pulse::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: #25D366;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  80%, 100% { transform: scale(1.4); opacity: 0; }
+}
+
